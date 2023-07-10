@@ -158,6 +158,6 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 
 
-:point_right: [Вначало](#return "Вернуться вначало")
+:point_right: [В начало](#return "Вернуться в начало")
 
 
