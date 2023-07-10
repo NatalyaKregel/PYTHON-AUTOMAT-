@@ -155,6 +155,9 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_3/task_4.py "Открыть")
 
 
+
+
+
 :point_right: [Вначало](#return "Вернуться вначало")
 
 
