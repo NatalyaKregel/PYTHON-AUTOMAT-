@@ -155,16 +155,6 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_3/task_4.py "Открыть")
 
 
-<<<<<<< HEAD
-=======
-
-
-
-:point_right: [В начало](#return "Вернуться в начало")
->>>>>>> ac32b119ea132016e3fabc3b15d1e7af31c62ada
-
-
-
 
 # ДОМАШНЕЕ ЗАДАНИЕ №4
 
