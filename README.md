@@ -259,6 +259,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_6/task_4,5.py "Открыть")
 
 
+
 # ДОМАШНЕЕ ЗАДАНИЕ №7
 
 **Задача №1:**
