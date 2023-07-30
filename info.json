@@ -1,0 +1,44 @@
+{
+  "C:\\\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438\\new_dir": {
+    "image": {
+      "size": 4067,
+      "type": "directory"
+    },
+    "text": {
+      "size": 0,
+      "type": "directory"
+    },
+    "video": {
+      "size": 0,
+      "type": "directory"
+    },
+    "7.bin": {
+      "size": 871,
+      "type": "file"
+    },
+    "c.bin": {
+      "size": 4086,
+      "type": "file"
+    },
+    "o.bin": {
+      "size": 2612,
+      "type": "file"
+    },
+    "p.bin": {
+      "size": 3868,
+      "type": "file"
+    }
+  },
+  "C:\\\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438\\new_dir\\image": {
+    "e.jpg": {
+      "size": 1401,
+      "type": "file"
+    },
+    "x.jpg": {
+      "size": 2666,
+      "type": "file"
+    }
+  },
+  "C:\\\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438\\new_dir\\text": {},
+  "C:\\\u041f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438\\new_dir\\video": {}
+}

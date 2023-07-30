@@ -1,0 +1,10 @@
+name,path,size,type
+image,C:\Пользователи\new_dir,4067,directory
+text,C:\Пользователи\new_dir,0,directory
+video,C:\Пользователи\new_dir,0,directory
+7.bin,C:\Пользователи\new_dir,871,file
+c.bin,C:\Пользователи\new_dir,4086,file
+o.bin,C:\Пользователи\new_dir,2612,file
+p.bin,C:\Пользователи\new_dir,3868,file
+e.jpg,C:\Пользователи\new_dir\image,1401,file
+x.jpg,C:\Пользователи\new_dir\image,2666,file
