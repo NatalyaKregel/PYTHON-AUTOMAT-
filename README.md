@@ -411,7 +411,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Например рыбы, птицы и т.п. У каждого класса должны быть как общие свойства, например имя, так и специфичные для класса. Для каждого класса создайте метод, 
 выводящий информацию специфичную для данного класса.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_01.py "Открыть")
 
 
 **Задача №2:**
@@ -420,7 +420,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Вынесите общие свойства и методы классов в класс Животное.
 Остальные классы наследуйте от него. Убедитесь, что в созданные ранее классы внесены правки
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_02.py "Открыть")
 
 
 **Задача №3:**
@@ -429,7 +429,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
     ○ Класс принимает тип животного (название одного из созданных классов) и параметры для этого типа.
     ○ Внутри класса создайте экземпляр на основе переданного типа и верните его из класса-фабрики.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_03.py "Открыть")
 
 
 **Задача №4:**
@@ -438,7 +438,29 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
     ○ Класс принимает тип животного (название одного из созданных классов) и параметры для этого типа.
     ○ Внутри класса создайте экземпляр на основе переданного типа и верните его из класса-фабрики.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_04.py "Открыть")
+
+
+# ДОМАШНЕЕ ЗАДАНИЕ №11
+
+
+**Задача №1:**
+Доработайте прошлую задачу. Добавьте сравнение прямоугольников по площади
+Должны работать все шесть операций сравнения
+
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_11/task_01.py "Открыть")
+
+
+**Задача №2:**
+
+Добавьте ко всем задачам с семинара строки документации и методы вывода информации на печать.
+Создайте класс Матрица. Добавьте методы для:
+    ○ вывода на печать,
+    ○ сравнения,
+    ○ сложения,
+    ○ *умножения матриц
+
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_11/task_02.py "Открыть")
 
 
 :point_right: [Вначало](#return "Вернуться вначало")
