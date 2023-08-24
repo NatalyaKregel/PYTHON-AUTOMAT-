@@ -66,12 +66,10 @@ class Student:
 
 
     def new_estimate(self, name_of_lesson: str, number: int, type_est: str = "lesson"):
-        if name_of_lesson not in self.lessons["lessons"].keys():
-            raise AttributeError("Предмет не изучается этим студентом")
         if type_est == "lesson":
             if number < 2 or number > 5:
                 raise ValueError("Рейтинг вне допустимого диапазона (2-5)")
-            self.lessons["lessons"][name_of_lesson]["estimates"].append(number)
+            self.lessons["lesson"][name_of_lesson]["estimates"].append(number)
             self.lessons["middle_estimate"] = self.middle_estimate(self.lessons)
         elif type_est == "test":
             if number < 0 or number > 100:
@@ -92,7 +90,7 @@ class Student:
     def __repr__(self):
         result = f'''Student: full_name="{self.name} {self.second_name} {self.surname}",
 middle_estimate={self.lessons["middle_estimate"]}\n'''
-        for key, value in self.lessons["lessons"].items():
+        for key, value in self.lessons["lesson"].items():
             result += f'{key}={value["middle_estimate_test"]}\n'
         return result
 
@@ -103,24 +101,24 @@ if __name__ == '__main__':
     s1.new_estimate("русский язык", 4)
     s1.new_estimate("математика", 5)
     s1.new_estimate("физика", 5)
-    s1.new_estimate("информатика", 5)
+    s1.new_estimate("биология", 5)
     s1.new_estimate("химия", 3)
     print(s1)
     s1.new_estimate("русский язык", 3)
     s1.new_estimate("математика", 4)
     s1.new_estimate("физика", 5)
-    s1.new_estimate("информатика", 4)
+    s1.new_estimate("биология", 4)
     s1.new_estimate("химия", 2)
     print(s1)
     s1.new_estimate("русский язык", 66, "test")
     s1.new_estimate("математика", 80, "test")
     s1.new_estimate("физика", 90, "test")
-    s1.new_estimate("информатика", 80, "test")
+    s1.new_estimate("биология", 80, "test")
     s1.new_estimate("химия", 50, "test")
     print(s1)
     s1.new_estimate("русский язык", 75, "test")
     s1.new_estimate("математика", 90, "test")
     s1.new_estimate("физика", 95, "test")
-    s1.new_estimate("информатика", 90, "test")
+    s1.new_estimate("биология", 90, "test")
     s1.new_estimate("химия", 70, "test")
     print(s1)
