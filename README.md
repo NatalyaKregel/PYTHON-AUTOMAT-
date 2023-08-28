@@ -10,7 +10,7 @@
 Обязательно учтите год ввода Григорианского календаря
 В коде должны быть один input и один print
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -24,7 +24,7 @@
 Откажитесь от магических чисел
 В коде должны быть один input и один print
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_2.py "Открыть")
 
 
 **Задача №3:**
@@ -34,14 +34,14 @@
 Пример результата:
 Сколько рядов у ёлки? 5
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_3.py "Открыть")
 
 
 **Задача №4:**
 
 Выведите в консоль таблицу умножения от 2х2 до 9х10 как на школьной тетрадке.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_4.py "Открыть")
 
 
 **Задача №5:**
@@ -52,7 +52,7 @@
 с такими сторонами не существует. Отдельно сообщить является ли треугольник разносторонним,
 равнобедренным или равносторонним.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_5.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_5.py "Открыть")
 
 
 **Задача №6:**
@@ -60,7 +60,7 @@
 Используйте правило для проверки: «Число является простым, если делится нацело только на единицу
 и на себя». Сделайте ограничение на ввод отрицательных чисел и чисел больше 100 тысяч.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_6.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_6.py "Открыть")
 
 
 **задача №7:**
@@ -70,7 +70,7 @@
 from random import randint
 num = randint(LOWER_LIMIT, UPPER_LIMIT) 
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_1/task_7.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv_1/homework_1/task_7.py "Открыть")
 
 
 # ДОМАШНЕЕ ЗАДАНИЕ №2
@@ -80,7 +80,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 Напишите программу, которая получает целое число и возвращает его шестнадцатеричное строковое представление. Функцию hex используйте для проверки своего результата.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/Homework_2/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv2/Homework_2/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -88,7 +88,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Напишите программу, которая принимает две строки вида “a/b” - дробь с числителем и знаменателем. 
 Программа должна возвращать сумму и произведение* дробей. Для проверки своего кода используйте модуль fractions.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/Homework_2/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv2/Homework_2/task_2.py "Открыть")
 
 
 **Задача №3:**
@@ -111,7 +111,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 ✔ Любое действие выводит сумму денег.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/Homework_2/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv2/Homework_2/task_3.py "Открыть")
 
 
 # ДОМАШНЕЕ ЗАДАНИЕ №3
@@ -130,21 +130,21 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 ✔ Для решения используйте операции с множествами. Код должен расширяться на любое большее количество друзей.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_3/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv3/homework_3/task_1.py "Открыть")
 
 
 **Задача №2:**
 
 Дан список повторяющихся элементов. Вернуть список с дублирующимися элементами. В результирующем списке не должно быть дубликатов.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_3/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv3/homework_3/task_2.py "Открыть")
 
 
 **Задача №3:**
 
 В большой текстовой строке подсчитать количество встречаемых слов и вернуть 10 самых частых. Не учитывать знаки препинания и регистр символов. За основу возьмите любую статью из википедии или из документации к языку.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_3/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv3/homework_3/task_3.py "Открыть")
 
 
 **Задача №4:**
@@ -152,7 +152,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Создайте словарь со списком вещей для похода в качестве ключа и их массой в качестве значения. Определите какие вещи влезут в рюкзак передав его максимальную грузоподъёмность. Достаточно вернуть один допустимый вариант.
 *Верните все возможные варианты комплектации рюкзака.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_3/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv3/homework_3/task_4.py "Открыть")
 
 
 
@@ -190,7 +190,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Таблицу создайте в виде однострочного генератора, где каждый элемент генератора — отдельный пример таблицы умножения.
 Для вывода результата используйте «принт» без перехода на новую строку.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_5/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv5/homework_5/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -198,7 +198,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Напишите функцию, которая принимает на вход строку — абсолютный путь до файла. 
 Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_5/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv5/homework_5/task_2.py "Открыть")
 
 
 **Задача №3:**
@@ -208,14 +208,14 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 В результате получаем словарь с именем в качестве ключа и суммой премии в качестве значения. 
 Сумма рассчитывается как ставка умноженная на процент премии
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_5/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv5/homework_5/task_3.py "Открыть")
 
 
 **Задача №4:**
 
 Создайте функцию генератор чисел Фибоначчи.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_5/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv5/homework_5/task_4.py "Открыть")
 
 
 # ДОМАШНЕЕ ЗАДАНИЕ №6
@@ -228,7 +228,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 быть в диапазоне [1, 9999]. Весь период (1 января 1 года - 31 декабря 9999 года) действует Григорианский календарь.
 Проверку года на високосность вынести в отдельную защищённую функцию.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_6/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv6/homework_6/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -237,14 +237,14 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Добавьте в __init__ пакета имена модулей внутри дандер __all__. 
 В модулях создайте дандер __all__ и укажите только те функции, которые могут верно работать за пределами модуля.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_6/init.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv6/homework_6/init.py "Открыть")
 
 
 **Задача №3:**
 
 В модуль с проверкой даты добавьте возможность запуска в терминале с передачей даты на проверку.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_6/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv6/homework_6/task_3.py "Открыть")
 
 
 **Задача №4,5:**
@@ -258,7 +258,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Напишите функцию в шахматный модуль. Используйте генератор случайных чисел для случайной расстановки ферзей в задаче выше. 
 Проверяйте различный случайные варианты и выведите 4 успешных расстановки.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_6/task_4,5.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv6/homework_6/task_4,5.py "Открыть")
 
 
 
@@ -279,7 +279,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 ✔ Внутри используйте вызов функции из прошлой задачи.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_7/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv7/homework_7/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -292,7 +292,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 ✔ Существующие файлы не должны удаляться/изменяться в случае совпадения имён.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_7/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv7/homework_7/task_2.py "Открыть")
 
 
 **Задача №3:**
@@ -303,7 +303,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 ✔ В исходной папке должны остаться только те файлы, которые не подошли для сортировки.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_7/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv7/homework_7/task_3.py "Открыть")
 
 
 **Задача №4:**
@@ -317,7 +317,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 * -- принимать диапазон сохраняемого оригинального имени. Например для диапазона [3, 6] берутся буквы с 3 по 6 из исходного имени файла.
 * К ним прибавляется желаемое конечное имя, если оно передано. Далее счётчик файлов и расширение.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_7/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv7/homework_7/task_4.py "Открыть")
 
 
 
@@ -329,7 +329,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Напишите функцию, которая ищет json файлы в указанной директории и сохраняет их содержимое 
 в виде одноимённых pickle файлов.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_8/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv8/homework_8/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -338,7 +338,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Для тестированию возьмите pickle версию файла из задачи 4 этого семинара.
 Функция должна извлекать ключи словаря для заголовков столбца из переданного файла.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_8/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv8/homework_8/task_2.py "Открыть")
 
 
 **Задача №3:**
@@ -346,7 +346,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Прочитайте созданный в прошлом задании csv файл без использования csv.DictReader.
 Распечатайте его как pickle строку
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_8/task_3.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv8/homework_8/task_3.py "Открыть")
 
 
 **Задача №4:**
@@ -358,7 +358,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 -   Для файлов сохраните его размер в байтах,
     а для директорий размер файлов в ней с учётом всех вложенных файлов и директорий.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_8/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv8/homework_8/task_4.py "Открыть")
 
 
 # ДОМАШНЕЕ ЗАДАНИЕ №9
@@ -368,7 +368,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 Создайте декоратор с параметром. Параметр - целое число, количество запусков декорируемой функции.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_9/task_1.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv9/homework_9/task_1.py "Открыть")
 
 
 **Задача №2:**
@@ -383,7 +383,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 Доработайте прошлую задачу добавив декоратор wraps в каждый из декораторов
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_9/task_2.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv9/homework_9/task_2.py "Открыть")
 
 
 **Задача №3:**
@@ -400,7 +400,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
     
 Соберите пакет с играми из тех файлов, что уже были созданы в рамках курса
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_9/task_4.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv9/homework_9/task_4.py "Открыть")
 
 
 # ДОМАШНЕЕ ЗАДАНИЕ №10
@@ -411,7 +411,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Например рыбы, птицы и т.п. У каждого класса должны быть как общие свойства, например имя, так и специфичные для класса. Для каждого класса создайте метод, 
 выводящий информацию специфичную для данного класса.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_01.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv10/homework_10/task_01.py "Открыть")
 
 
 **Задача №2:**
@@ -420,7 +420,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Вынесите общие свойства и методы классов в класс Животное.
 Остальные классы наследуйте от него. Убедитесь, что в созданные ранее классы внесены правки
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_02.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv10/homework_10/task_02.py "Открыть")
 
 
 **Задача №3:**
@@ -429,7 +429,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
     ○ Класс принимает тип животного (название одного из созданных классов) и параметры для этого типа.
     ○ Внутри класса создайте экземпляр на основе переданного типа и верните его из класса-фабрики.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_03.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv10/homework_10/task_03.py "Открыть")
 
 
 **Задача №4:**
@@ -438,7 +438,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
     ○ Класс принимает тип животного (название одного из созданных классов) и параметры для этого типа.
     ○ Внутри класса создайте экземпляр на основе переданного типа и верните его из класса-фабрики.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_10/task_04.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv10/homework_10/task_04.py "Открыть")
 
 
 # ДОМАШНЕЕ ЗАДАНИЕ №11
@@ -448,7 +448,7 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Доработайте прошлую задачу. Добавьте сравнение прямоугольников по площади
 Должны работать все шесть операций сравнения
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_11/task_01.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv11/homework_11/task_01.py "Открыть")
 
 
 **Задача №2:**
@@ -460,7 +460,28 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
     ○ сложения,
     ○ *умножения матриц
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/homework_11/task_02.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv11/homework_11/task_02.py "Открыть")
+
+
+# ДОМАШНЕЕ ЗАДАНИЕ №12
+
+
+**Задача №1:**
+Задание №6: Изменяем класс прямоугольника.
+Заменяем пару декораторов проверяющих длину и ширину на дескриптор с валидацией размера.
+
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv12/homework_12/task_01.py "Открыть")
+
+
+**Задача №2:**
+
+Создайте класс студента.
+○ Используя дескрипторы проверяйте ФИО на первую заглавную букву и наличие только букв.
+○ Названия предметов должны загружаться из файла CSV при создании экземпляра. Другие предметы в экземпляре недопустимы.
+○ Для каждого предмета можно хранить оценки (от 2 до 5) и результаты тестов (от 0 до 100).
+○ Также экземпляр должен сообщать средний балл по тестам для каждого предмета и по оценкам всех предметов вместе взятых.
+
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv12/homework_12/task_02_student.py "Открыть")
 
 
 :point_right: [Вначало](#return "Вернуться вначало")
