@@ -7,118 +7,103 @@
 '''
 
 import csv
-from functools import reduce
-from pathlib import Path
 
-class Validate:
-    """Проверяет полное имя на первую заглавную букву и наличие только букв"""
-
+class NameValidator:
     def __set_name__(self, owner, name):
-        self.param_name = '_' + name
+        self.name = name
 
     def __get__(self, instance, owner):
-        return getattr(instance, self.param_name)
+        return instance.__dict__[self.name]
 
     def __set__(self, instance, value):
-        self.validate(value)
-        setattr(instance, self.param_name, value)
+        for item in value.split():
+            if not item.isalpha() or not item.istitle():
+                raise ValueError(f"{self.name} должно начинатся на заглавную и содержать только буквы")
+        instance.__dict__[self.name] = value
 
-    def __delete__(self, instance):
-        raise AttributeError(f'Свойство {self.param_name} невозможно удалить')
+class SubjectValidator:
+    def __set_name__(self, owner, name):
+        self.name = name
 
-    def validate(self, value):                                          
-        if not isinstance(value, str):
-            raise TypeError(f'Значение {value} должно быть текстовым')
-        if not value.isalpha():
-            raise TypeError(f'Значение {value} должно содержать только буквы')
-        if not value.istitle():
-            raise TypeError(f'Значение {value} должно начинаться с заглавной буквы')
+    def __get__(self, instance, owner):
+        return instance.__dict__[self.name]
 
+    def __set__(self, instance, value):
+        with open('subjects.csv', 'r', encoding='utf-8') as file:
+            reader = csv.reader(file)
+            subjects = next(reader)
+            if value not in subjects:
+                raise ValueError(f"{value} не верный предмет.")
+        instance.__dict__[self.name] = value
 
 class Student:
-    name = Validate()
-    second_name = Validate()
-    surname = Validate()
-    _lessons = None
+    name = NameValidator()
+    subject = SubjectValidator()
 
-    def __init__(self, name: str, second_name: str, surname: str, lessons: Path):
+    def __init__(self, name):
         self.name = name
-        self.second_name = second_name
-        self.surname = surname
-        self.lessons = lessons
+        self.subjects_data = {}
 
-    @property
-    def lessons(self):
-        return self._lessons
+    def add_grade(self, grade):
+        if not (2 <= grade <= 5):
+            raise ValueError("Оценка должна быть от 2 до 5.")
+        if self.subject not in self.subjects_data:
+            self.subjects_data[self.subject] = {'grades': [], 'test_results': []}
+        self.subjects_data[self.subject]['grades'].append(grade)
 
-    @lessons.setter
-    def lessons(self, lessons: Path):
-        if self.lessons is not None:
-            raise AttributeError(f'Список предметов уже определен')
-        self._lessons = {"lessons": {}}
-        with open(lessons, 'r', encoding='utf-8') as csv_file:
-            reader = csv.reader(csv_file)
-            for row in reader:
-                self._lessons["lessons"][row[0]] = {"estimates": [],
-                                                    "tests": [],
-                                                    "middle_estimate_test": None}
-        self._lessons["middle_estimate"] = None
+    def add_test_result(self, result):
+        if not (0 <= result <= 100):
+            raise ValueError("Результат должен быть между 0 и 100.")
+        if self.subject not in self.subjects_data:
+            self.subjects_data[self.subject] = {'grades': [], 'test_results': []}
+        self.subjects_data[self.subject]['test_results'].append(result)
+
+    def average_grade(self, subject):
+        grades = self.subjects_data.get(subject, {}).get('grades', [])
+        return sum(grades) / len(grades)
+
+    def average_test_result(self, subject):
+        test_results = self.subjects_data.get(subject, {}).get('test_results', [])
+        return sum(test_results) / len(test_results)
+
+    def overall_average_grade(self):
+        all_grades = [grade for subject_data in self.subjects_data.values() for grade in subject_data.get('grades', [])]
+        return sum(all_grades) / len(all_grades)
+
+    def overall_average_test_result(self):
+        all_test_results = [result for subject_data in self.subjects_data.values() for result in subject_data.get('test_results', [])]
+        return sum(all_test_results) / len(all_test_results)
+
+if __name__ == "__main__":
+    student = Student("Вася Петечкин")
+
+    # Добавление оценок
+    student.subject = "Алгебра"
+    student.add_grade(4)
+    student.add_grade(5)
+    student.add_test_result(90)
+    student.add_test_result(70)
+
+    # Для другого предмета
+    student.subject = "Физика"
+    student.add_grade(3)
+    student.add_grade(4)
+    student.add_test_result(80)
+    student.add_test_result(50)
+
+    # Вывод среднего балла по каждому предмету
+    for subject in student.subjects_data.keys():
+        print(f"Средний балл в {subject}: {student.average_grade(subject)}")
+        print(f"Средний тест в {subject}: {student.average_test_result(subject)}")
+
+    # Вывод общего среднего балла
+    print(f"Общий средний балл: {student.overall_average_grade()}")
+    print(f"Общий средний тест: {student.overall_average_test_result()}")
 
 
-    def new_estimate(self, name_of_lesson: str, number: int, type_est: str = "lesson"):
-        if type_est == "lesson":
-            if number < 2 or number > 5:
-                raise ValueError("Рейтинг вне допустимого диапазона (2-5)")
-            self.lessons["lesson"][name_of_lesson]["estimates"].append(number)
-            self.lessons["middle_estimate"] = self.middle_estimate(self.lessons)
-        elif type_est == "test":
-            if number < 0 or number > 100:
-                raise ValueError("Рейтинг вне допустимого диапазона (0-100)")
-            self.lessons["lessons"][name_of_lesson]["tests"].append(number)
-            self.lessons["lessons"][name_of_lesson]["middle_estimate_test"] = \
-                reduce(lambda x, y: x + y, self.lessons["lessons"][name_of_lesson]["tests"]) / \
-                len(self.lessons["lessons"][name_of_lesson]["tests"])
 
+'''
 
-    @staticmethod
-    def middle_estimate(lessons: dict):
-        all_estimates = []
-        [all_estimates.extend(lessons["lessons"][name]["estimates"]) for name in lessons["lessons"]]
-        return reduce(lambda x, y: x + y, all_estimates) / len(all_estimates)
-
-
-    def __repr__(self):
-        result = f'''Student: full_name="{self.name} {self.second_name} {self.surname}",
-middle_estimate={self.lessons["middle_estimate"]}\n'''
-        for key, value in self.lessons["lesson"].items():
-            result += f'{key}={value["middle_estimate_test"]}\n'
-        return result
-
-
-if __name__ == '__main__':
-    s1 = Student("Nikolay", "Alekseevich", "Eremeev", Path('lessons.csv'))
-    print(s1)
-    s1.new_estimate("русский язык", 4)
-    s1.new_estimate("математика", 5)
-    s1.new_estimate("физика", 5)
-    s1.new_estimate("биология", 5)
-    s1.new_estimate("химия", 3)
-    print(s1)
-    s1.new_estimate("русский язык", 3)
-    s1.new_estimate("математика", 4)
-    s1.new_estimate("физика", 5)
-    s1.new_estimate("биология", 4)
-    s1.new_estimate("химия", 2)
-    print(s1)
-    s1.new_estimate("русский язык", 66, "test")
-    s1.new_estimate("математика", 80, "test")
-    s1.new_estimate("физика", 90, "test")
-    s1.new_estimate("биология", 80, "test")
-    s1.new_estimate("химия", 50, "test")
-    print(s1)
-    s1.new_estimate("русский язык", 75, "test")
-    s1.new_estimate("математика", 90, "test")
-    s1.new_estimate("физика", 95, "test")
-    s1.new_estimate("биология", 90, "test")
-    s1.new_estimate("химия", 70, "test")
-    print(s1)
+import os
+print(os.getcwd())    
+'''
