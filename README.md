@@ -484,4 +484,5 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv12/homework_12/task_02_student.py "Открыть")
 
 
+
 :point_right: [Вначало](#return "Вернуться вначало")
