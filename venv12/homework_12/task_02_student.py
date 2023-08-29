@@ -6,104 +6,143 @@
 ○ Также экземпляр должен сообщать средний балл по тестам для каждого предмета и по оценкам всех предметов вместе взятых.
 '''
 
+from typing import List, Any, Iterable
 import csv
 
-class NameValidator:
-    def __set_name__(self, owner, name):
-        self.name = name
+# Дескриптор для ФИО
+class NameDescriptor:
+    def __set_name__(self, owner: Any, name: str) -> None:
+        self.assigned_attribute: str = name
 
-    def __get__(self, instance, owner):
-        return instance.__dict__[self.name]
+    def __get__(self, instance: Any, owner: Any) -> Any:
+        return instance.dict[self.assigned_attribute]
 
-    def __set__(self, instance, value):
-        for item in value.split():
-            if not item.isalpha() or not item.istitle():
-                raise ValueError(f"{self.name} должно начинатся на заглавную и содержать только буквы")
-        instance.__dict__[self.name] = value
+    def __set__(self, instance: Any, value: str) -> Any:
+        name: str = value.replace(" ", "")
 
-class SubjectValidator:
-    def __set_name__(self, owner, name):
-        self.name = name
+        if name and name.isalpha() and value.istitle():
+            instance.__dict__[self.assigned_attribute] = value
+        else:
+            raise ValueError('\n\033[31m"ФИО должно начинаться с заглавной буквы и содержать только буквы!"\033[0m')
 
-    def __get__(self, instance, owner):
-        return instance.__dict__[self.name]
+# Основной класс ПРЕДМЕТ
+class StudentSubject:
+    def __init__(self, name: str) -> None:
+        self.name: str = name
+        self.grade_scores: List[int] = []
+        self.test_scores: List[int] = []
 
-    def __set__(self, instance, value):
-        with open('subjects.csv', 'r', encoding='utf-8') as file:
-            reader = csv.reader(file)
-            subjects = next(reader)
-            if value not in subjects:
-                raise ValueError(f"{value} не верный предмет.")
-        instance.__dict__[self.name] = value
+    def add_grade_score(self, scores: int) -> None:
+        if 2 <= scores <= 5:
+            self.grade_scores.append(scores)
+        else:
+            raise ValueError('\n\033[31m"Оценка должна находиться в диапазоне от 2 до 5!"\033[0m')
 
-class Student:
-    name = NameValidator()
-    subject = SubjectValidator()
+    def add_test_score(self, result: int) -> None:
+        if 0 <= result <= 100:
+            self.test_scores.append(result)
+        else:
+            raise ValueError('\n\033[31m"Тест должен находиться в диапазоне от 0 до 100!"\033[0m')
 
-    def __init__(self, name):
-        self.name = name
-        self.subjects_data = {}
+# Основной класс ПРОФИЛЬ
+class StudentProfile:
+    subjects_list: NameDescriptor = NameDescriptor()
 
-    def add_grade(self, grade):
-        if not (2 <= grade <= 5):
-            raise ValueError("Оценка должна быть от 2 до 5.")
-        if self.subject not in self.subjects_data:
-            self.subjects_data[self.subject] = {'grades': [], 'test_results': []}
-        self.subjects_data[self.subject]['grades'].append(grade)
+    def __init__(self, csv_file: str) -> None:
+        self.student_subjects: List[StudentSubject] = self.load_subjects_from_csv('subjects.csv')
 
-    def add_test_result(self, result):
-        if not (0 <= result <= 100):
-            raise ValueError("Результат должен быть между 0 и 100.")
-        if self.subject not in self.subjects_data:
-            self.subjects_data[self.subject] = {'grades': [], 'test_results': []}
-        self.subjects_data[self.subject]['test_results'].append(result)
+    def load_subjects_from_csv(self, csv_file: str) -> List[StudentSubject]:
+        student_subjects: List[StudentSubject] = []
 
-    def average_grade(self, subject):
-        grades = self.subjects_data.get(subject, {}).get('grades', [])
-        return sum(grades) / len(grades)
+        with open('subjects.csv', 'r', newline='', encoding='utf-8') as file:
+            reader: Iterable = csv.reader(file)
 
-    def average_test_result(self, subject):
-        test_results = self.subjects_data.get(subject, {}).get('test_results', [])
-        return sum(test_results) / len(test_results)
+            for row in reader:
+                subject_title: str = row[0]
+                student_subjects.append(StudentSubject(subject_title))
 
-    def overall_average_grade(self):
-        all_grades = [grade for subject_data in self.subjects_data.values() for grade in subject_data.get('grades', [])]
-        return sum(all_grades) / len(all_grades)
+        return student_subjects
 
-    def overall_average_test_result(self):
-        all_test_results = [result for subject_data in self.subjects_data.values() for result in subject_data.get('test_results', [])]
-        return sum(all_test_results) / len(all_test_results)
+    def get_subject(self, subject_name: str) -> StudentSubject:
+        for student_subject in self.student_subjects:
+            if student_subject.name == subject_name:
+                return student_subject
+
+    def add_grade(self, subject_name: str, grade: int) -> None:
+        student_subject: StudentSubject = self.get_subject(subject_name)
+        student_subject.add_grade_score(grade)
+
+    def add_test_result(self, subject_name: str, result: int) -> None:
+        student_subject: StudentSubject = self.get_subject(subject_name)
+        if student_subject is not None:
+            student_subject.add_test_score(result)
+        else:
+            raise ValueError(f"Предмет '{subject_name}' отсутствует в списке!")
+
+    def calculate_average_grade(self, subject_name: str) -> float:
+        student_subject: StudentSubject = self.get_subject(subject_name)
+
+        if student_subject.grade_scores:
+            return sum(student_subject.grade_scores) / len(student_subject.grade_scores)
+
+        return 0.0
+
+    def calculate_average_grade_all_subjects(self) -> float:
+        student_grades: List[int] = [grade for subject in self.student_subjects for grade in subject.grade_scores]
+
+        if student_grades:
+            return sum(student_grades) / len(student_grades)
+
+        return 0.0
+
+    def calculate_average_test_result(self, subject_name: str) -> float:
+        student_subject: StudentSubject = self.get_subject(subject_name)
+
+        if student_subject.test_scores:
+            return sum(student_subject.test_scores) / len(student_subject.test_scores)
+
+        return 0.0
+
+    def calculate_average_test_all_subjects(self) -> float:
+        student_test: List[int] = [test for subject in self.student_subjects for test in subject.test_scores]
+
+        if student_test:
+            return sum(student_test) / len(student_test)
+
+        return 0.0
+
 
 if __name__ == "__main__":
-    student = Student("Вася Петечкин")
+    try:
+        student: StudentProfile = StudentProfile("student subject.csv")
+        student.subjects_list: str = "Петрова Ольга Петровна"
 
-    # Добавление оценок
-    student.subject = "Алгебра"
-    student.add_grade(4)
-    student.add_grade(5)
-    student.add_test_result(90)
-    student.add_test_result(70)
+        #оценки по предметам:
+        student.add_grade("Физика", 2)
+        student.add_grade("Физика", 5)
+        student.add_grade("Математика", 4)
+        student.add_grade("Математика", 5)
+        student.add_grade("Информатика", 2)
+        student.add_grade("Информатика", 3)
 
-    # Для другого предмета
-    student.subject = "Физика"
-    student.add_grade(3)
-    student.add_grade(4)
-    student.add_test_result(80)
-    student.add_test_result(50)
+        print("\nДНЕВНИК:\n\033[32mСредний балл по Физике: \033[0m",
+              round(student.calculate_average_grade("Физика"), 2))
+        print("\033[32mСредний балл по Математике: \033[0m", round(student.calculate_average_grade("Математика"), 2))
+        print("\033[32mСредний балл по Информатике: \033[0m", round(student.calculate_average_grade("Информатика"), 2))
+        print("\033[32mОБЩИЙ СРЕДНИЙ БАЛЛ ПО ВСЕМ ПРЕДМЕТАМ: \033[0m",
+              round(student.calculate_average_grade_all_subjects(), 2))
+        print(" -------------------------------------- ")
 
-    # Вывод среднего балла по каждому предмету
-    for subject in student.subjects_data.keys():
-        print(f"Средний балл в {subject}: {student.average_grade(subject)}")
-        print(f"Средний тест в {subject}: {student.average_test_result(subject)}")
-
-    # Вывод общего среднего балла
-    print(f"Общий средний балл: {student.overall_average_grade()}")
-    print(f"Общий средний тест: {student.overall_average_test_result()}")
-
-
-
-'''
-
-import os
-print(os.getcwd())    
-'''
+        #оценки по тестам:
+        student.add_test_result("Химия", 63)
+        student.add_test_result("Химия", 86)
+        student.add_test_result("Биология", 56)
+        student.add_test_result("Биология", 48)
+        print("\033[32mСредний результат тестов по Химии: \033[0m",
+              round(student.calculate_average_test_result("Химия"), 2))
+        print("\033[32mСредний результат тестов по Биологии: \033[0m",
+              round(student.calculate_average_test_result("Биология"), 2))
+        print("\033[32mОБЩИЙ СРЕДНИЙ БАЛЛ ПО ТЕСТАМ: \033[0m",
+              round(student.calculate_average_test_all_subjects(), 2))
+    except ValueError as e:
+        print(f"\n\033[31mОшибка: {e}\033[0m")
