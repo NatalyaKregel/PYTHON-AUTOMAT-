@@ -8,8 +8,8 @@
 чем ваш уровень, вызывайте исключение уровня доступа.
 '''
 
-from task04 import UserData, data_from_json
-from task06 import MyLevelEx, MyAccessEx
+from task_04 import UserData, data_from_json
+from task_06 import MyLevelEx, MyAccessEx
 from typing import Any
 
 
