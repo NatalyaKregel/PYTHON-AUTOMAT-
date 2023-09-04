@@ -17,12 +17,18 @@ class TestUnit(unittest.TestCase):
     def test_mirror(self):
         self.assertEqual(calculation(183), 381)
 
-'''
-    def test_nagative_value(self):
-        with self.assertRaises(ValueError) as e:
-            calculation('jjj')
-        self.assertEqual('Строка должна содержать только буквы', 'Строка должна содержать только буквы')
-'''
+    def test_less_zero(self):
+        self.assertEqual(calculation(0), 'num должно быть > 0')
+
+    def test_less_thousand(self):
+        self.assertEqual(calculation(1001), 'num должно быть < 999')
+
+    def test_float(self):
+        self.assertEqual(calculation(1.8), 'num должно быть целым числом')
+
+    def test_int(self):
+        self.assertEqual(calculation('45'), 'num должно быть числом')
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

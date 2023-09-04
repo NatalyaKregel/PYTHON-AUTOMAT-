@@ -16,5 +16,17 @@ def test_works():
 def test_mirror():
     assert calculation(183) == 381
 
+def test_less_zero():
+    assert calculation(0) == 'num должно быть > 0'
+
+def test_less_thousandr():
+    assert calculation(1001) == 'num должно быть < 999'
+
+def test_float():
+    assert calculation(1.8) == 'num должно быть целым числом'
+
+def test_int():
+    assert calculation('45') == 'num должно быть числом'
+
 if __name__ == '__main__':
     pytest.main(['-v'])
