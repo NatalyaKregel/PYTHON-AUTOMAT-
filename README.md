@@ -616,9 +616,9 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Возьмите любые 1-3 задачи из прошлых домашних заданий.
 Добавьте к ним логирование ошибок и полезной информации. Также реализуйте возможность запуска из командной строки с передачей параметров.
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_02.py "Открыть")
+1)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_02.py "Открыть")
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_04_student.py "Открыть")
+2)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_04_student.py "Открыть")
 
 
 
