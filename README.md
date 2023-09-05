@@ -602,13 +602,18 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Напишите код, который запускается из командной строки и получает на вход путь до директории на ПК.
 Соберите информацию о содержимом в виде объектов namedtuple.
 Каждый объект хранит:
+
 ○ имя файла без расширения или название каталога,
+
 ○ расширение, если это файл,
+
 ○ флаг каталога,
+
 ○ название родительского каталога.
+
 В процессе сбора сохраните данные в текстовый файл используя логирование
 
-:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_01.py "Открыть")
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_01.py "Открыть")
 
 
 **Задача №2:**
@@ -616,9 +621,9 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Возьмите любые 1-3 задачи из прошлых домашних заданий.
 Добавьте к ним логирование ошибок и полезной информации. Также реализуйте возможность запуска из командной строки с передачей параметров.
 
-1)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_02.py "Открыть")
+1)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_02.py "Открыть")
 
-2)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework_15/task_04_student.py "Открыть")
+2)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_04_student.py "Открыть")
 
 
 
