@@ -567,11 +567,11 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 В большой текстовой строке подсчитать количество встречаемых слов и вернуть 10 самых частых. Не учитывать знаки препинания и регистр символов.
 
    
-doctest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_doctest.py "Открыть")
+        ✔ doctest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_doctest.py "Открыть")
 
-unittest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_unittest.py "Открыть")
+        ✔ unittest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_unittest.py "Открыть")
 
-pytest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_pytest.py "Открыть")
+        ✔ pytest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_pytest.py "Открыть")
 
 
 Пользователь вводит число от 1 до 999. Используя операции с числами сообщите что введено: цифра, двузначное число или трёхзначное число.
@@ -586,11 +586,11 @@ pytest - :point_right: [Перейти к решению](https://github.com/Nat
 ✔ Если число не из диапазона, запросите новое число. Откажитесь от магических чисел. В коде должны быть один input и один print
 
 
-doctest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_doctest.py "Открыть")
+        ✔ doctest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_doctest.py "Открыть")
 
-unittest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_unittest.py "Открыть")
+        ✔ unittest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_unittest.py "Открыть")
 
-pytest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_pytest.py "Открыть")
+        ✔ pytest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_pytest.py "Открыть")
 
 
 
