@@ -521,4 +521,39 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 
 
+# ДОМАШНЕЕ ЗАДАНИЕ №14
+
+
+**Задача №1:**
+
+На семинаре 13 был создан проект по работе с пользователями (имя, id, уровень)
+Напишите 3-7 тестов pytest для данного проекта. Исользуйте фикстуры.
+
+:point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv12/homework_14/task_01_pytest_id.py "Открыть")
+
+
+**Задача №2:**
+
+Решить задачи, которые не успели решить на семинаре. Возьмите 1-3 задачи из тех, что были на прошлых семинарах или в домашних заданиях. Напишите к ним тесты.
+2-5 тестов на задачу в трёх вариантах:
+○ doctest,
+○ unittest,
+○ pytest. 
+
+1) В большой текстовой строке подсчитать количество встречаемых слов и вернуть 10 самых частых. Не учитывать знаки препинания и регистр символов.
+doctest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_doctest.py "Открыть")
+unittest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_unittest.py "Открыть")
+pytest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_02_pytest.py "Открыть")
+
+2) Пользователь вводит число от 1 до 999. Используя операции с числами сообщите что введено: цифра, двузначное число или трёхзначное число.
+Для цифры верните её квадрат, например 5 - 25
+Для двузначного числа произведение цифр, например 30 - 0
+Для трёхзначного числа его зеркальное отображение, например 520 - 25
+Если число не из диапазона, запросите новое число. Откажитесь от магических чисел. В коде должны быть один input и один print
+
+doctest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_doctest.py "Открыть")
+unittest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_unittest.py "Открыть")
+pytest - :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv14/homework_14/task_03_pytest.py "Открыть")
+
+
 :point_right: [Вначало](#return "Вернуться вначало")
