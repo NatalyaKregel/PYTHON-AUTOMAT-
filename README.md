@@ -623,7 +623,9 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 
 1)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_02.py "Открыть")
 
-2)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_04_student.py "Открыть")
+2)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_03.py "Открыть")
+
+3)  :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_04_student.py "Открыть")
 
 
 
