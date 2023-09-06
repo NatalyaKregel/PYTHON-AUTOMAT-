@@ -621,11 +621,14 @@ num = randint(LOWER_LIMIT, UPPER_LIMIT)
 Возьмите любые 1-3 задачи из прошлых домашних заданий.
 Добавьте к ним логирование ошибок и полезной информации. Также реализуйте возможность запуска из командной строки с передачей параметров.
 
-1) система исчисления :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_02.py "Открыть")
+1)  система исчисления
+    :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_02.py "Открыть")
 
-2)  математические действия: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_03.py "Открыть")
+2)  математические действия
+   :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_03.py "Открыть")
 
-3)  студенты :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_04_student.py "Открыть")
+6)  студенты
+   :point_right: [Перейти к решению](https://github.com/NatalyaKregel/PYTHON-AUTOMAT-/blob/master/venv15/homework15/task_04_student.py "Открыть")
 
 
 
