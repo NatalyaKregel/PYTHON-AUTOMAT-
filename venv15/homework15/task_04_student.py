@@ -22,7 +22,7 @@ def main():
         logging.error('Invalid student name format.')
     except InvalidSubjectError as e:
         logging.error(f'Invalid subject: {e.subject}')
-    except InvalidSubjectError as e:
+    except InvalidTestError as e:
         logging.error(f'Invalid score: {e.score}')
 
 
